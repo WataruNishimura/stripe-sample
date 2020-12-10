@@ -5,6 +5,10 @@
     "node": true,
     "amd": true
   },
+  "plugins": [
+    "html"
+  ],
+  "ignorePatterns": "./dist/assets/bundle.js",
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "rules": {
     "prettier/prettier": [
@@ -15,5 +19,8 @@
         "semi": true
       }
     ]
+  },
+  "parserOptions": {
+    "sourceType": "module"
   }
 }
