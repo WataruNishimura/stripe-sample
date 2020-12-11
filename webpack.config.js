@@ -29,6 +29,23 @@ module.exports = {
           },
         ],
       },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
+        loader: 'eslint-loader',
+        options: {
+          fix: true,
+        },
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
+        loader: 'babel-loader',
+        options: {
+          presets: [['@babel/preset-env']],
+        },
+      },
     ],
   },
 };
