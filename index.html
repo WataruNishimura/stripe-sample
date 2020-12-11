@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./dist/assets/bundle.js" defer></script>
-  </head>
-  <body>
-  
-  </body>
+
+<head>
+  <title>Stripe Node Sample</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+  <script src="./dist/assets/bundle.js" defer></script>
+</head>
+
+<body>
+  <form id="payment-form">
+    <input type="text" id="customerId" placeholder="顧客ID">
+    <div id="card-element">
+    </div>
+    <button id="submit">
+      <div class="spinner hidden" id="spinner"></div>
+      <span id="button-text">Pay</span>
+    </button>
+    <p id="card-error" role="alert"></p>
+    <p class="result-message hidden">
+      Payment succeeded see the result in your
+      <a href="" target="_blank">Stripe dashbord.</a> Refresh the page to pay again.</p>
+  </form>
+</body>
+
 </html>
